@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/fittings1"
+
+        android:title="Bluem"
+
+        />
+    <item android:id="@+id/fittings2"
+
+        android:title="Aks"
+
+        />
+    <item android:id="@+id/fittings3"
+
+        android:title="GTV"
+
+        />
+</menu>

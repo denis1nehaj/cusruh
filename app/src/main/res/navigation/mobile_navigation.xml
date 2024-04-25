@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cuswork.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_photos"
+            app:destination="@id/navigation_photos" />
+        <action
+            android:id="@+id/action_home_to_photos_2"
+            app:destination="@id/navigation_photos_2" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.cuswork.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_calculator"
+        android:name="com.example.cuswork.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_photos_2"
+        android:name="com.example.cuswork.ui.PhotosFragment"
+        tools:layout="@layout/fragment_photos3"
+
+        >
+        <action
+            android:id="@+id/action_navigation_photos_2_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_photos"
+        android:name="com.example.cuswork.ui.PhotosFragment"
+        tools:layout="@layout/fragment_photos">
+        <action
+            android:id="@+id/action_navigation_photos_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <action
+        android:id="@+id/action_home_to_photos_2"
+        app:destination="@id/navigation_photos_2" />
+        />
+
+
+
+
+
+</navigation>

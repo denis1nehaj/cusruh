@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/furniture1"
+
+    android:title="Тумба"
+
+        />
+    <item android:id="@+id/furniture2"
+
+        android:title="Шкаф"
+
+        />
+    <item android:id="@+id/furniture3"
+
+        android:title="Стол с Тумбой"
+
+        />
+</menu>

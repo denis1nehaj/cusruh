@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/material1"
+
+        android:title="ДСП"
+
+        />
+    <item android:id="@+id/material2"
+
+        android:title="Дерево"
+
+        />
+    <item android:id="@+id/material3"
+
+        android:title="МДФ"
+
+        />
+</menu>
