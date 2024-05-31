@@ -4,4 +4,11 @@
     <!-- you can use any color you want I used here gray color-->
     <solid android:color="@color/main_1"/>
     <corners android:radius="16dp"/>
+    <gradient
+
+        android:angle="45"
+        android:startColor="#22c1c3"
+        android:endColor="#fdbb2d"
+        ></gradient>
+
 </shape>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/bagraund"
+    android:background="@drawable/gradietn_one"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:screenOrientation="portrait"
+    tools:context=".ui.dashboard.CalculatorFragment">
 
 
     <View
@@ -25,8 +26,8 @@
         android:layout_height="wrap_content"
         android:text="Мабельный Калькулятор"
         android:textSize="24sp"
-        android:fontFamily="@font/main4"
         android:textStyle="bold"
+        android:fontFamily="@font/main4"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,9 +49,10 @@
             android:id="@+id/title_tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Стол с тумбой"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:text="Шкаф"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/title_tv3"
@@ -70,15 +72,16 @@
                 android:layout_height="200dp"
                 android:layout_weight="0.8"
                 android:layout_marginLeft="8dp"
-                android:src="@drawable/img_3"
+                android:src="@drawable/img_41"
                 />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:src="@drawable/img_3"
-                android:layout_weight="0.8"
-                android:layout_marginRight="8dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.8"
+                android:src="@drawable/img_5"
 
                 />
 
@@ -93,7 +96,7 @@
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:src="@drawable/img"
+                android:src="@drawable/img_6"
                 android:layout_marginLeft="8dp"
                 />
 
@@ -103,18 +106,19 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/img_22" />
+                android:src="@drawable/img_7" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/photos_to_calculator"
+            android:id="@+id/photos_to_calculator_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:backgroundTintMode="src_in"
             android:textStyle="bold"
-           android:text="@string/select" />
+            android:text="@string/select" />
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

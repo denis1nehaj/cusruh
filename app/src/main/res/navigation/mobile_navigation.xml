@@ -9,21 +9,36 @@
         android:id="@+id/navigation_home"
         android:name="com.example.cuswork.ui.home.HomeFragment"
         android:label="@string/title_home"
+
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_home_to_photos"
-            app:destination="@id/navigation_photos" />
+            app:destination="@id/navigation_photos"
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_out_right"
+            />
         <action
             android:id="@+id/action_home_to_photos_2"
-            app:destination="@id/navigation_photos_2" />
+            app:destination="@id/navigation_photos_2"
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_home_to_photos_3"
+            app:destination="@+id/navigation_photos_3"
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_out_right"
+            />
 
     </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.cuswork.ui.dashboard.DashboardFragment"
+        android:name="com.example.cuswork.ui.dashboard.CalculatorFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_calculator" />
 
     <fragment
         android:id="@+id/navigation_calculator"
@@ -31,29 +46,43 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 
-    <fragment
-        android:id="@+id/navigation_photos_2"
-        android:name="com.example.cuswork.ui.PhotosFragment"
-        tools:layout="@layout/fragment_photos3"
-
-        >
-        <action
-            android:id="@+id/action_navigation_photos_2_to_navigation_profile"
-            app:destination="@id/navigation_profile" />
-    </fragment>
 
     <fragment
         android:id="@+id/navigation_photos"
-        android:name="com.example.cuswork.ui.PhotosFragment"
+        android:name="com.example.cuswork.ui.dashboard.photos"
         tools:layout="@layout/fragment_photos">
         <action
             android:id="@+id/action_navigation_photos_to_navigation_profile"
-            app:destination="@id/navigation_profile" />
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_out_right"/>
+
     </fragment>
-    <action
-        android:id="@+id/action_home_to_photos_2"
-        app:destination="@id/navigation_photos_2" />
-        />
+
+    <fragment
+        android:id="@+id/navigation_photos_2"
+        android:name="com.example.cuswork.ui.dashboard.photos3"
+        tools:layout="@layout/fragment_photos3">
+        <action
+            android:id="@+id/action_navigation_photos_2_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_photos_3"
+        android:name="com.example.cuswork.ui.Photos5"
+        tools:layout="@layout/fragment_photos5">
+<action
+    android:id="@+id/action_navigation_photos_3_to_navigation_profile"
+    app:destination="@id/navigation_profile"
+    app:enterAnim="@anim/slide_in_left"
+    app:popExitAnim="@anim/slide_out_right"
+    app:exitAnim="@anim/slide_out_right"/>
+    </fragment>
 
 
 

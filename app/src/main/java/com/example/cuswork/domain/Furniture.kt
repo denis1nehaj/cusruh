@@ -1,4 +1,4 @@
-package com.example.cuswork.ui
+package com.example.cuswork.domain
 
 data class Furniture(
     val title: String,

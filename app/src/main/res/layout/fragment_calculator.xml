@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/bagraund"
+    android:background="@drawable/gradietn_one"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.CalculatorFragment">
 
 
     <View
@@ -67,6 +67,21 @@
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.111" />
 
+    <TextView
+        android:id="@+id/pluscoast1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/name_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="@+id/Popup_btn_1"
+        app:layout_constraintTop_toBottomOf="@+id/Popup_btn_1"
+        app:layout_constraintVertical_bias="0.48" />
 
     <TextView
         android:id="@+id/name_3"
@@ -133,6 +148,25 @@
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.351" />
 
+    <TextView
+        android:id="@+id/pluscoast2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text=""
+
+        android:textSize="15sp"
+
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@+id/materialValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="@+id/Popup_btn_2"
+        app:layout_constraintTop_toBottomOf="@+id/Popup_btn_2"
+        app:layout_constraintVertical_bias="0.361" />
+
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
@@ -153,13 +187,13 @@
         android:paddingTop="8dp"
         android:paddingEnd="16dp"
         android:paddingBottom="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        tools:layout_editor_absoluteX="-29dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Высота:"
+            android:text="Высота:(в метрах)"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -167,13 +201,16 @@
         <EditText
             android:id="@+id/height"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoEnterAction"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Ширина:"
+            android:text="Ширина:(в метрах)"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -181,13 +218,16 @@
         <EditText
             android:id="@+id/width"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoEnterAction"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Длинна:"
+            android:text="Глубина:(в метрах)"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -195,12 +235,15 @@
         <EditText
             android:id="@+id/length"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
 
 
         <View
             android:id="@+id/view_2"
-            android:layout_width="401dp"
+            android:layout_width="match_parent"
             android:layout_height="17dp"
 
 
@@ -208,25 +251,32 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp" />
 
+
+        <TextView
+            android:id="@+id/roundcoast"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Цена"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="733dp" />
+
         <Button
             android:id="@+id/btncoast"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="30dp"
             android:background="@drawable/radius"
+            android:gravity="center"
             android:text="Рассчитать"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="696dp"
-            android:text="Цена" />
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="688dp" />
     </LinearLayout>
 
-
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

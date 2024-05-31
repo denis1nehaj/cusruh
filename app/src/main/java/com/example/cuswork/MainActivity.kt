@@ -1,8 +1,9 @@
 package com.example.cuswork
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.Toast
@@ -12,7 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.cuswork.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ManagerActivity {
 
 
 private lateinit var binding: ActivityMainBinding
@@ -24,7 +25,7 @@ private lateinit var binding: ActivityMainBinding
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
-
+        getManager().loadOrderList(this)
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         val appBarConfiguration = AppBarConfiguration(
@@ -36,4 +37,9 @@ private lateinit var binding: ActivityMainBinding
         navView.setupWithNavController(navController)
 
     }
+
+    override fun getManager(): CalculatorManager {
+        return CalculatorManager.newInstance()
+    }
+
 }
