@@ -5,12 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import android.content.Context
 import android.util.Log
 import android.widget.PopupMenu
-import android.widget.Toast
-import com.example.cuswork.CalculatorManager
 import com.example.cuswork.MainActivity
 import com.example.cuswork.ManagerActivity
 import com.example.cuswork.R
@@ -19,7 +16,6 @@ import com.example.cuswork.domain.Fitting
 import com.example.cuswork.domain.Order
 import com.example.cuswork.domain.Furniture
 import com.example.cuswork.domain.Material
-import java.lang.Exception
 
 class CalculatorFragment : Fragment() {
 
@@ -52,7 +48,6 @@ class CalculatorFragment : Fragment() {
             apply()
         }
 
-        Toast.makeText(context, furnitureType, Toast.LENGTH_SHORT).show()
         var selectedFurnitureTitle = ""
         val materialList = listOf(Material("Дерево", 70), Material("ДСП", 0), Material("МДФ", 40))
         val fittingList = listOf(Fitting("Blum", 50), Fitting("Aks", 0), Fitting("GTV", 20))
