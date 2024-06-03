@@ -1,12 +1,17 @@
 package com.example.cuswork.ui.notifications
 
+import OrderAdapter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.cuswork.ManagerActivity
 import com.example.cuswork.databinding.FragmentNotificationsBinding
 
@@ -23,16 +28,16 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
-                NotificationsViewModel::class.java
-            )
-
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.titleTv
-        textView.text = (activity as ManagerActivity).getManager().orderList.toString()
+        val recyclerView: RecyclerView = binding.recyclerView
+        val orderList = (activity as ManagerActivity).getManager().orderList
+        Log.d("order_list", "order_list = $orderList")
+        val orderAdapter = OrderAdapter(orderList)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = orderAdapter
+
         return root
     }
 

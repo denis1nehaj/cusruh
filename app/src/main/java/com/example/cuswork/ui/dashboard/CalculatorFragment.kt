@@ -40,12 +40,6 @@ class CalculatorFragment : Fragment() {
 
         ):
             View {
-        val calculatorViewModel =
-            ViewModelProvider(
-                this,
-                ViewModelProvider.NewInstanceFactory()
-            ).get(CalculatorViewModel::class.java)
-
         _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val popUpBtn = binding.PopupBtn
