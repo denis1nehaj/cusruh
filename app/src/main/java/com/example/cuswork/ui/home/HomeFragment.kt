@@ -73,10 +73,6 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun FragmentNavigatorExtras(sharedElements: Pair<Text, String>) {
-
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

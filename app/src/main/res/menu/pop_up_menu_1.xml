@@ -8,12 +8,12 @@
         />
     <item android:id="@+id/material2"
 
-        android:title="Дерево"
+        android:title="Дерево +70BYN"
 
         />
     <item android:id="@+id/material3"
 
-        android:title="МДФ"
+        android:title="МДФ +40BYN"
 
         />
 </menu>

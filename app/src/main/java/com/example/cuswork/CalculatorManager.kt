@@ -6,6 +6,7 @@ import com.example.cuswork.domain.Order
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
+
 class CalculatorManager {
     companion object {
         const val PREF_NAME = "calculator_manager_prefs"

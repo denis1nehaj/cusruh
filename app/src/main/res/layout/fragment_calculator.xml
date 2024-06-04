@@ -71,17 +71,17 @@
         android:id="@+id/pluscoast1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text=""
         android:textSize="15sp"
+
+
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Popup_btn_1"
 
-
-        app:layout_constraintBottom_toBottomOf="@+id/name_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
-        app:layout_constraintStart_toStartOf="@+id/Popup_btn_1"
-        app:layout_constraintTop_toBottomOf="@+id/Popup_btn_1"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintEnd_toEndOf="@+id/Popup_btn_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/title_tv" />
 
     <TextView
         android:id="@+id/name_3"

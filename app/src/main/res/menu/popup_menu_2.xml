@@ -3,7 +3,7 @@
 
     <item android:id="@+id/fittings1"
 
-        android:title="Bluem"
+        android:title="Bluem +50BYN"
 
         />
     <item android:id="@+id/fittings2"
@@ -13,7 +13,7 @@
         />
     <item android:id="@+id/fittings3"
 
-        android:title="GTV"
+        android:title="GTV +20BYN"
 
         />
 </menu>
